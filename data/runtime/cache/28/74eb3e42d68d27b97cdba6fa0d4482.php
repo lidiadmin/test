@@ -1,0 +1,4 @@
+<?php
+//000000086400
+ exit();?>
+a:2:{i:0;a:4:{s:4:"code";s:13:"VertifyManage";s:4:"data";s:0:"";s:6:"status";i:1;s:6:"config";s:281:"{"code":"VertifyManage","name":"\u9a8c\u8bc1\u7801\u7ba1\u7406","version":"v1.0.5","min_version":"v1.2.0","author":"King\u8d85","description":"\u9a8c\u8bc1\u7801\u5f00\u5173\u7ba1\u7406\uff0c\u81ea\u5b9a\u4e49\u9a8c\u8bc1\u7801\u663e\u793a\u6837\u5f0f","scene":"0","permission":[]}";}i:1;a:4:{s:4:"code";s:8:"AdminLog";s:4:"data";s:0:"";s:6:"status";i:1;s:6:"config";s:234:"{"code":"AdminLog","name":"\u540e\u53f0\u64cd\u4f5c\u65e5\u5fd7","version":"v1.0.2","min_version":"v1.1.9","author":"King\u8d85","description":"\u67e5\u770b\u7ba1\u7406\u540e\u53f0\u64cd\u4f5c\u65e5\u5fd7","scene":"0","permission":[]}";}}
