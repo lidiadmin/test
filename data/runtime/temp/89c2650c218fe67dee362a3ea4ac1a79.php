@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:46:"./application/admin/template/index\welcome.htm";i:1596507477;s:60:"D:\wwwroot\test\application\admin\template\public\footer.htm";i:1571728724;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:46:"./application/admin/template/index\welcome.htm";i:1600349721;s:60:"D:\wwwroot\test\application\admin\template\public\footer.htm";i:1571728724;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -100,43 +100,6 @@
                 </div>
             </div>
             <div class="section system_section" style="float: none;width: inherit;">
-                <div class="system_section_con">
-                    <div class="sc_title" style="padding: 26px 0 14px;border-bottom: 1px solid #e4eaec;">
-                      
-                        <h3><i class="fa fa-gear"></i>程序信息</h3>
-                    </div>
-                    <div class="sc_warp" id="system_warp" style="display: block;">
-                        <table cellpadding="0" cellspacing="0" class="system_table">
-                            <tbody>
-                                <tr>
-                                    <td class="gray_bg">系统更新：</td>
-                                    <td id="td_upgrade_msg">
-                                        <div id="upgrade_filelist" style="display:none;"></div> 
-                                        <div id="upgrade_intro" style="display:none;"></div> 
-                                        <div id="upgrade_notice" style="display:none;"></div> 
-                                        <a href="javascript:void(0);" id="a_upgrade" data-version="" data-max_version="" data-iframe="workspace" title="" data-tips_url="<?php echo url('Upgrade/setPopupUpgrade'); ?>" data-upgrade_url="<?php echo url('Upgrade/OneKeyUpgrade'); ?>" data-check_authority="<?php echo url('Upgrade/check_authority'); ?>"><?php if($upgrade == 'true'): ?>正在版本检测中……<?php else: ?>已是最新版<?php endif; ?></a>
-                                    </td>
-                                    <td class="gray_bg">当前版本：</td>
-                                    <td><?php echo (isset($sys_info['curent_version']) && ($sys_info['curent_version'] !== '')?$sys_info['curent_version']:'v1.0'); ?></td>
-                                </tr>
-                                <tr>
-                                    <td class="gray_bg">程序名称：</td>
-                                    <td><?php echo (isset($sys_info['web_name']) && ($sys_info['web_name'] !== '')?$sys_info['web_name']:'Eyoucms企业网站管理系统'); ?></td>
-                                    <td class="gray_bg">版权所有：</td>
-                                    <td><?php if(!(empty($is_eyou_authortoken) || (($is_eyou_authortoken instanceof \think\Collection || $is_eyou_authortoken instanceof \think\Paginator ) && $is_eyou_authortoken->isEmpty()))): ?>盗版必究<?php else: ?>正版软件<?php endif; ?></td>
-                                </tr>
-                                <?php if(!(empty($is_eyou_authortoken) || (($is_eyou_authortoken instanceof \think\Collection || $is_eyou_authortoken instanceof \think\Paginator ) && $is_eyou_authortoken->isEmpty()))): ?>
-                                <tr>
-                                    <td class="gray_bg">更新日志：</td>
-                                    <td><a href="http://www.eyoucms.com/rizhi/" target="_blank">查看</a></td>
-                                    <td class="gray_bg">帮助中心:</td>
-                                    <td><a href="http://www.eyoucms.com/ask/" target="_blank">查看</a></td>
-                                </tr>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
                 <div class="system_section_con">
                     <div class="sc_title" style="padding: 26px 0 14px;border-bottom: 1px solid #e4eaec;">
                         

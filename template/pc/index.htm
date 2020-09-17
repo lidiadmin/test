@@ -35,6 +35,22 @@
 <!--网站公用头部——开始-->
 {eyou:include file="header.htm" /}
 <!--网站公用头部——结束-->
+{eyou:channelartlist typeid='3'}
+<div class="bg_gray top_menu">
+  <div class="width">
+    <!--产品中心子栏目——开始-->
+    <div class="home_nav">
+      <ul>
+        {eyou:channel type="son" row='50'}
+        <li id="one{$i}" onMouseOver="setTab('one',{$i},3)"><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        {/eyou:channel}
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <!--产品中心子栏目——结束-->
+  </div>
+</div>
+{/eyou:channelartlist}
 <!--广告首页大幻灯——开始-->
 <div class="banner">
   <div class="skitter" id="banner">
@@ -48,7 +64,7 @@
 
 <!--广告首页大幻灯——结束-->
 <!--关于我们——开始-->
-<div class="p20"></div>
+<!-- <div class="p20"></div>
 {eyou:channelartlist typeid='1'}
 <div class="width">
  
@@ -57,17 +73,15 @@
       <img src="{eyou:adv pid='5' row='1'}{$field.litpic}{/eyou:adv}" width="410" height="260">
     </div>
     <div class="right">
-     <!--公司简介——开始-->
       <h2>{eyou:global name='web_name' /}</h2>
       <p>{eyou:type typeid='8' addtable='single_content'}{$field.content|html_msubstr=###,0,275}...{/eyou:type}</p>
     
       <span class="more"><a href="{eyou:field name='typeurl' /}">查看更多<i class="fa fa-angle-right"></i></a></span>
-      <!--公司简介——结束-->
     </div>
   </div>
 </div>
 {/eyou:channelartlist}
-<div class="p20"></div>
+<div class="p20"></div> -->
 <!--关于我们——结束-->
 <!--产品中心——开始-->
 {eyou:channelartlist typeid='3'}
@@ -95,7 +109,7 @@
         <li><a href="{$field.arcurl}" title="{$field.title}">
           <div><img src="{$field.litpic}" alt="{$field.title}" height="280"></div>
           <p class="title">{$field.title}</p>
-          <p class="price"><span>点击数：{$field.click} </span>¥ {$field.users_price} </p>
+          <!-- <p class="price"><span>点击数：{$field.click} </span>¥ {$field.users_price} </p> -->
           </a></li>
         {/eyou:arclist} 
       </ul>
@@ -107,8 +121,46 @@
 </div>
 {/eyou:channelartlist}
 <!--产品中心——结束-->
+<!--企业展示——开始-->
+{eyou:channelartlist typeid='68'}
+<div class="bg_gray">
+  <div class="width">
+   <div class="p10"></div>
+    <div class="home_title">
+	  <h2>{eyou:field name='typename' /}</h2>
+	  <div class="border">{eyou:field name='englist_name' /}</div>
+    </div>
+    <!--产品中心子栏目——开始-->
+    <div class="home_nav mt20">
+      <ul>
+        {eyou:channel type="son" row='3'}
+        <li {eyou:eq name='$i' value='1'}class="hover"{/eyou:eq} id="one{$i}" onMouseOver="setTab('one',{$i},3)"><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        {/eyou:channel}
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <!--产品中心子栏目——结束-->
+    <div class="home_pro">
+     {eyou:channel type="son" row='3'}
+      <ul id="con_one_{$i}" {eyou:eq name='$i' value='1'}{else /}class="dis"{/eyou:eq}>
+       {eyou:arclist typeid='$field.typeid' row='8' titlelen='30'}
+        <li><a href="{$field.arcurl}" title="{$field.title}">
+          <div><img src="{$field.litpic}" alt="{$field.title}" height="280"></div>
+          <p class="title">{$field.title}</p>
+          <!-- <p class="price"><span>点击数：{$field.click} </span>¥ {$field.users_price} </p> -->
+          </a></li>
+        {/eyou:arclist} 
+      </ul>
+      <div class="clear"></div>
+      {/eyou:channel}
+    </div>
+    <div class="home_more"> <span class="more"><a href="{eyou:field name='typeurl' /}">查看更多<i class="fa fa-angle-right"></i></a></span></div>
+  </div>
+</div>
+{/eyou:channelartlist}
+<!--企业展示——结束-->
 <!--新闻动态——开始-->
-{eyou:channelartlist typeid='2'}
+<!-- {eyou:channelartlist typeid='2'}
 <div class="width">
   <div class="p10"></div>
     <div class="home_title">
@@ -134,10 +186,10 @@
     <div class="home_more"> <span class="more"><a href="{eyou:field name='typeurl' /}">查看更多<i class="fa fa-angle-right"></i></a></span></div>
   </div>
 </div>
-{/eyou:channelartlist}
+{/eyou:channelartlist} -->
 <!--新闻动态——结束-->
 <!--应用方案——开始-->
-{eyou:channelartlist typeid='4'}
+<!-- {eyou:channelartlist typeid='4'}
 <div class="width">
   <div class="p10"></div>
     <div class="home_title">
@@ -163,7 +215,7 @@
     <div class="home_more"> <span class="more"><a href="{eyou:field name='typeurl' /}">查看更多<i class="fa fa-angle-right"></i></a></span></div>
   </div>
 </div>
-{/eyou:channelartlist}
+{/eyou:channelartlist} -->
 <!--应用方案——结束-->
 <!--发布采购——开始-->
 {eyou:channelartlist typeid='78'}

@@ -74,7 +74,6 @@
                     <p class="notic">请输入完整的URL网址（包含http或https），设置后访问该条信息将直接跳转到设置的网址</p>
                 </dd>
             </dl>
-            {if condition="!empty($channelfield_row['litpic']) AND 1 == $channelfield_row['litpic']['ifeditable']"}
             <dl class="row">
                 <dt class="tit">
                   <label>缩略图</label>
@@ -101,7 +100,6 @@
                     &nbsp;<a href="javascript:void(0);" onclick="system_thumb();" class="ncap-btn ncap-btn-green">缩略图配置</a>
                 </dd>
             </dl>
-            {/if}
 
             {include file="archives/get_field_addonextitem" /}
         </div>

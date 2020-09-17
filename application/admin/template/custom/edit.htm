@@ -57,7 +57,6 @@
                     <label><input type="checkbox" name="is_recom" value="1" {if condition="$field.is_recom == 1"}checked{/if}>推荐[c]</label>&nbsp;
                     <label><input type="checkbox" name="is_special" value="1" {if condition="$field.is_special == 1"}checked{/if}>特荐[a]</label>&nbsp;
                     <label><input type="checkbox" name="is_b" value="1" {if condition="$field.is_b == 1"}checked{/if}>加粗[b]</label>&nbsp;
-                    <label><input type="checkbox" name="is_litpic" value="1" {if condition="$field.is_litpic == 1"}checked{/if}>图片[p]</label>&nbsp;
                     <label><input type="checkbox" name="is_jump" value="1" {if condition="$field.is_jump == 1"}checked{/if}>跳转[j]</label>&nbsp;
                     <span class="err"></span>
                     <p class="notic"></p>
@@ -73,7 +72,6 @@
                     <p class="notic">请输入完整的URL网址（包含http或https），设置后访问该条信息将直接跳转到设置的网址</p>
                 </dd>
             </dl>
-            {if condition="!empty($channelfield_row['litpic']) AND 1 == $channelfield_row['litpic']['ifeditable']"}
             <dl class="row">
                 <dt class="tit">
                   <label>缩略图</label>
@@ -100,7 +98,6 @@
                     &nbsp;<a href="javascript:void(0);" onclick="system_thumb();" class="ncap-btn ncap-btn-green">缩略图配置</a>
                 </dd>
             </dl>
-            {/if}
             
             {include file="archives/get_field_addonextitem" /}
         </div>

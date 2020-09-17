@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:44:"./application/admin/template/index\index.htm";i:1596507477;s:61:"D:\wwwroot\test\application\admin\template\public\menubox.htm";i:1571728724;s:58:"D:\wwwroot\test\application\admin\template\public\left.htm";i:1591186160;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:44:"./application/admin/template/index\index.htm";i:1600349633;s:61:"D:\wwwroot\test\application\admin\template\public\menubox.htm";i:1571728724;s:58:"D:\wwwroot\test\application\admin\template\public\left.htm";i:1591186160;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -119,22 +119,7 @@
                   <i class="fa fa-toggle-on"></i>
                   <span class="hidden-xs">功能开关</span>
                 </a>
-                <?php endif; endif; if(!(empty($is_eyou_authortoken) || (($is_eyou_authortoken instanceof \think\Collection || $is_eyou_authortoken instanceof \think\Paginator ) && $is_eyou_authortoken->isEmpty()))): ?>
-              <!-- 商业授权 -->   
-              <em class="eyou_tool em_authortoken" data-expanded="close">
-                <a class="btn btn-default dropdown-toggle" title="购买后可去除所有版权提示" href="javascript:void(0);" onclick="valide(this);">
-                  <i class="fa fa-bookmark"></i>
-                  <span class="hidden-xs">购买授权</span>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="shouquan">
-                    <li class="ey-tool-list text-center"><a target="_blank" class="liaojie" href="http://www.eyoucms.com/buy/">了解商业授权</a></li>
-                    <li class="ey-tool-list text-center">
-                      <input class="btn btn-primary" type="button" onclick="$('.em_authortoken').toggleClass('open');openItem('Index|authortoken');" value="检测是否正版" />
-                    </li>
-                </ul>
-               </em>
-              <!-- 商业授权 -->   
-              <?php endif; ?>
+                <?php endif; endif; ?>
 
               <!-- 多语言 -->
               <em id="Language_index" class="eyou_tool em_lang" data-expanded="close" <?php if(empty($web_language_switch)): ?>style="display: none;"<?php endif; ?>>

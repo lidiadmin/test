@@ -40,6 +40,7 @@ i,em{ font-style:normal;}
 .header .fr span{margin:0;padding:0 0 0 40px;float:left;}
 .header .fr span a{font-size:18px;color:#2A95E5;display:block;float:none;margin:0;}
 .header .fr .tel{font-size: 24px;padding-left: 50px; color: #1184da;font-weight: bold;background:url(../img/tel.png) no-repeat;}
+.tel{font-size: 34px;padding-left: 50px;padding-top: 25px; color: #fff;font-weight: bold;}
 
 .bg_nav{background:#1184DA;}
 .nav{list-style:none;margin:0;padding:0;}
@@ -184,6 +185,9 @@ span.more a .fa {
 .footer .fr .left ul li{text-align:left;font-size:12px;color:#fff;font-family:microsoft yahei;line-height:24px;font-weight:normal;}
 .footer .fr .left ul li a{color:#B0D8F6;font-size:14px;}
 .footer .fr .left ul li a:hover{color:#ff0;}
+
+.se_keywords{border:1px solid #1184DA;padding:6px 10px;width:200px;}
+.se_submit{border:1px solid #1184DA;background:#1184DA;color:#fff;padding:6px 15px;}
 
 .copyright{border-top:1px solid #69B5ED;text-align:center;padding:15px 0;color:#fff;font-size:12px;}
 .copyright a{color:#fff;}
@@ -579,6 +583,8 @@ a.gaoqing:hover{background:url("../img/gaoqing_1.jpg") 1px 1px no-repeat;color:#
 .fa-angle-right:before {
     content: "\f105";
 }
-
+.top_menu{padding: 15px 0 15px 0 !important;}
+.top_menu ul{margin: 0px !important;}
+.top_menu ul li{float: left; width: 19%;margin-bottom: 2px !important;}
 
 

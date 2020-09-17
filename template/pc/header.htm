@@ -25,9 +25,15 @@
  <div class="width header">
   <div class="fl"><a href="{eyou:global name='web_cmsurl' /}"><img src="{eyou:global name='web_logo' /}" alt="{eyou:global name='web_name' /}"></a></div>
   <div class="fr">
-     <div class="tel">{eyou:global name='web_attr_1' /}</div>
-    
-    </div>
+     <!-- <div class="tel">{eyou:global name='web_attr_1' /}</div> -->
+	 {eyou:searchform type='default'}
+	 <form method="get" action="{$field.action}">
+	   {$field.hidden}
+	   <input type="text" name="keywords" placeholder="请输入关键字" class="se_keywords">
+	   <input type="submit" value="搜索" class="se_submit">
+     </form>
+     {/eyou:searchform} 
+  </div>
   <div class="clear"></div>
 </div>
     
@@ -37,21 +43,23 @@
              <li class="{eyou:eq name='$Request.param.m' value='Index'}hover{/eyou:eq}"><a href="{eyou:global name='web_cmsurl' /}" title="首页">首页</a></li>
 			 {eyou:channel type="top" row="60" id="field" currentstyle="hover"}
 			 <li class="{$field.currentstyle}"><a href="{$field.typeurl}">{$field.typename}</a>
-			  {eyou:notempty name="$field.children"}
-			  <ul class="subnav">
-			    {eyou:channel name="$field.children" row="100" id="field2"}
-				 <li><a href="{$field2.typeurl}">{$field2.typename}</a>
-	             {eyou:notempty name="$field2.children"}
-		            <ul class="subnav2">
-						{eyou:channel name="$field2.children" row="100" id="field3"}
-						 <li><a href="{$field2.typeurl}">{$field3.typename}</a> </li>
-						{/eyou:channel}   
-		            </ul> 
-		         {/eyou:notempty}  
-		         </li>
-			    {/eyou:channel}   
-			  </ul>
-			 {/eyou:notempty}
+				{if condition="$field.typeid != 3"}
+					{eyou:notempty name="$field.children"}
+					<ul class="subnav">
+						{eyou:channel name="$field.children" row="100" id="field2"}
+						<li><a href="{$field2.typeurl}">{$field2.typename}</a>
+						{eyou:notempty name="$field2.children"}
+							<ul class="subnav2">
+								{eyou:channel name="$field2.children" row="100" id="field3"}
+								<li><a href="{$field2.typeurl}">{$field3.typename}</a> </li>
+								{/eyou:channel}   
+							</ul> 
+						{/eyou:notempty}  
+						</li>
+						{/eyou:channel}
+					</ul>
+					{/eyou:notempty}
+				{/if}
 			 </li>
 		 	 {/eyou:channel}
             </ul>

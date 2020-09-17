@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:38:"./template/pc/users\download_index.htm";i:1596507489;s:54:"D:\wwwroot\test\template\pc\users\skin\css\diy_css.htm";i:1596507489;s:50:"D:\wwwroot\test\template\pc\users\users_header.htm";i:1571728724;s:49:"./public/static/template/users/users_leftmenu.htm";i:1571728724;s:48:"D:\wwwroot\test\template\pc\users\users_left.htm";i:1571728724;s:50:"D:\wwwroot\test\template\pc\users\users_footer.htm";i:1571728724;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:38:"./template/pc/users\download_index.htm";i:1596507489;s:54:"D:\wwwroot\test\template\pc\users\skin\css\diy_css.htm";i:1596507489;s:50:"D:\wwwroot\test\template\pc\users\users_header.htm";i:1571728724;s:49:"./public/static/template/users/users_leftmenu.htm";i:1600351652;s:48:"D:\wwwroot\test\template\pc\users\users_left.htm";i:1571728724;s:50:"D:\wwwroot\test\template\pc\users\users_footer.htm";i:1571728724;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -271,11 +271,7 @@
             <div class="list-group">
                 <!-- 插件菜单 -->
                     
-    <?php  $tagUsermenu = new \think\template\taglib\eyou\TagUsermenu; $_result = $tagUsermenu->getUsermenu("active", ""); if(is_array($_result) || $_result instanceof \think\Collection || $_result instanceof \think\Paginator): $i = 0; $e = 1; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo htmlspecialchars_decode("");else: foreach($__LIST__ as $key=>$field): $i= intval($key) + 1;$mod = ($i % 2 ); ?>
-        <li class="list-group-item ">
-            <a href="<?php echo $field['url']; ?>" class="list-group-item icon<?php echo $i; ?> <?php echo $field['currentstyle']; ?>"><i></i><?php echo $field['title']; ?></a>
-        </li>
-    <?php ++$e; endforeach; endif; else: echo htmlspecialchars_decode("");endif; $field = []; ?>
+    <?php  $tagUsermenu = new \think\template\taglib\eyou\TagUsermenu; $_result = $tagUsermenu->getUsermenu("active", ""); if(is_array($_result) || $_result instanceof \think\Collection || $_result instanceof \think\Paginator): $i = 0; $e = 1; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo htmlspecialchars_decode("");else: foreach($__LIST__ as $key=>$field): $i= intval($key) + 1;$mod = ($i % 2 ); ++$e; endforeach; endif; else: echo htmlspecialchars_decode("");endif; $field = []; ?>
                 <!-- 插件菜单 -->
                 <li class="list-group-item ">
                     <a href="<?php echo url("user/Users/logout","",true,false,null,null,null);?>" class="list-group-item">退出登录</a>
@@ -396,11 +392,7 @@
             <div class="list-group">
                 <!-- 扩展菜单 -->
                     
-    <?php  $tagUsermenu = new \think\template\taglib\eyou\TagUsermenu; $_result = $tagUsermenu->getUsermenu("active", ""); if(is_array($_result) || $_result instanceof \think\Collection || $_result instanceof \think\Paginator): $i = 0; $e = 1; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo htmlspecialchars_decode("");else: foreach($__LIST__ as $key=>$field): $i= intval($key) + 1;$mod = ($i % 2 ); ?>
-        <li class="list-group-item ">
-            <a href="<?php echo $field['url']; ?>" class="list-group-item icon<?php echo $i; ?> <?php echo $field['currentstyle']; ?>"><i></i><?php echo $field['title']; ?></a>
-        </li>
-    <?php ++$e; endforeach; endif; else: echo htmlspecialchars_decode("");endif; $field = []; ?>
+    <?php  $tagUsermenu = new \think\template\taglib\eyou\TagUsermenu; $_result = $tagUsermenu->getUsermenu("active", ""); if(is_array($_result) || $_result instanceof \think\Collection || $_result instanceof \think\Paginator): $i = 0; $e = 1; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo htmlspecialchars_decode("");else: foreach($__LIST__ as $key=>$field): $i= intval($key) + 1;$mod = ($i % 2 ); ++$e; endforeach; endif; else: echo htmlspecialchars_decode("");endif; $field = []; ?>
                 <!-- 扩展菜单 -->
             </div>
         </div>
