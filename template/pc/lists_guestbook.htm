@@ -75,31 +75,32 @@
     <div class="am-form-group">
       <label class="am-u-sm-2 am-form-label">{$field.itemname_24}</label>
       <div class="am-u-sm-10">
-        <input type="text" name="{$field.attr_24}" id="attr_24" size="50" maxlength="30" value="" >
+        <input type="text" name="{$field.attr_24}" id="attr_24" size="50" maxlength="30" value="" placeholder="请输入{$field.itemname_24}">
         <span for="my_title" class="msg-box"></span> </div>
-    </div>
-    <div class="am-form-group">
-      <label class="am-u-sm-2 am-form-label">{$field.itemname_26}</label>
-      <div class="am-u-sm-10">
-        <input type="text" name="{$field.attr_26}" id="attr_26" size="50" maxlength="20" value="">
-        <span for="my_truename" class="msg-box"></span> </div>
     </div>
     <div class="am-form-group">
       <label class="am-u-sm-2 am-form-label">{$field.itemname_28}</label>
       <div class="am-u-sm-10">
-        <input type="text" name="{$field.attr_28}" id="attr_28" size="50" maxlength="20" value="">
+        <input type="text" name="{$field.attr_28}" id="attr_28" size="50" maxlength="3" value="" placeholder="请输入{$field.itemname_28}">
+        <span for="my_truename" class="msg-box"></span> 套</div>
+    </div>
+    <div class="am-form-group">
+      <label class="am-u-sm-2 am-form-label">{$field.itemname_32}</label>
+      <div class="am-u-sm-10">
+        <input type='text' id='attr_32' name='{$field.attr_32}' size="50" maxlength="20" value="" placeholder="请输入{$field.itemname_32}">
         <span for="my_truename" class="msg-box"></span> </div>
     </div>
     <div class="am-form-group">
-      <label class="am-u-sm-2 am-form-label">{$field.itemname_30}</label>
+      <label class="am-u-sm-2 am-form-label">{$field.itemname_34}</label>
       <div class="am-u-sm-10">
-        <select name="{$field.attr_30}" id="attr_30" class="w420">
-          <option value="">{$field.itemname_30}</option>
-          {eyou:volist name='$field.options_30' id='vo'}
-          <option value="{$vo.value}">{$vo.value}</option>
-          {/eyou:volist}
-        </select>
-        <span for="my_sex" class="msg-box"></span> </div>
+        <input type='text' id='attr_34' name='{$field.attr_34}' size="50" placeholder="请输入{$field.itemname_34}">
+        <span for="my_truename" class="msg-box"></span> </div>
+    </div>
+    <div class="am-form-group">
+      <label class="am-u-sm-2 am-form-label">{$field.itemname_36}</label>
+      <div class="am-u-sm-10">
+        <textarea id='attr_36' name='{$field.attr_36}' style="width: 412px;"></textarea>
+        <span for="my_truename" class="msg-box"></span> </div>
     </div>
     {/eyou:if}
     

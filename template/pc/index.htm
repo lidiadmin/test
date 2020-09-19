@@ -134,7 +134,7 @@
     <div class="home_nav mt20">
       <ul>
         {eyou:channel type="son" row='3'}
-        <li {eyou:eq name='$i' value='1'}class="hover"{/eyou:eq} id="one{$i}" onMouseOver="setTab('one',{$i},3)"><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        <li {eyou:eq name='$i' value='1'}class="hover"{/eyou:eq} id="two{$i}" onMouseOver="setTab('two',{$i},3)"><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
         {/eyou:channel}
       </ul>
       <div class="clear"></div>
@@ -142,7 +142,7 @@
     <!--产品中心子栏目——结束-->
     <div class="home_pro">
      {eyou:channel type="son" row='3'}
-      <ul id="con_one_{$i}" {eyou:eq name='$i' value='1'}{else /}class="dis"{/eyou:eq}>
+      <ul id="con_two_{$i}" {eyou:eq name='$i' value='1'}{else /}class="dis"{/eyou:eq}>
        {eyou:arclist typeid='$field.typeid' row='8' titlelen='30'}
         <li><a href="{$field.arcurl}" title="{$field.title}">
           <div><img src="{$field.litpic}" alt="{$field.title}" height="280"></div>
@@ -160,7 +160,7 @@
 {/eyou:channelartlist}
 <!--企业展示——结束-->
 <!--新闻动态——开始-->
-<!-- {eyou:channelartlist typeid='2'}
+{eyou:channelartlist typeid='2'}
 <div class="width">
   <div class="p10"></div>
     <div class="home_title">
@@ -186,10 +186,10 @@
     <div class="home_more"> <span class="more"><a href="{eyou:field name='typeurl' /}">查看更多<i class="fa fa-angle-right"></i></a></span></div>
   </div>
 </div>
-{/eyou:channelartlist} -->
+{/eyou:channelartlist}
 <!--新闻动态——结束-->
 <!--应用方案——开始-->
-<!-- {eyou:channelartlist typeid='4'}
+{eyou:channelartlist typeid='4'}
 <div class="width">
   <div class="p10"></div>
     <div class="home_title">
@@ -215,7 +215,7 @@
     <div class="home_more"> <span class="more"><a href="{eyou:field name='typeurl' /}">查看更多<i class="fa fa-angle-right"></i></a></span></div>
   </div>
 </div>
-{/eyou:channelartlist} -->
+{/eyou:channelartlist}
 <!--应用方案——结束-->
 <!--发布采购——开始-->
 {eyou:channelartlist typeid='78'}
@@ -248,13 +248,14 @@
                         <div class="tc">{$vo2.attr_value|text_msubstr=###,0,50,true}</div>
                     </td>
             {/volist}
-        </tr>
-        {/eyou:foreach}
+          </tr>
+          {/eyou:foreach}
       </table>
     </ul>
     <div class="clear"></div>
-    <!-- <div class="home_more"> <span class="more"><a href="{eyou:field name='typeurl' /}">查看更多<i class="fa fa-angle-right"></i></a></span></div> -->
+    <div class="home_more"> <span class="more"><a href="/index.php?m=home&c=Purchase&a=lists&tid=78">查看更多<i class="fa fa-angle-right"></i></a></span></div>
   </div>
+  
 </div>
 {/notempty}
 {/eyou:channelartlist}

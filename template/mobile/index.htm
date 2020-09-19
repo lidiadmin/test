@@ -52,7 +52,7 @@
         <li><a href="{$field.arcurl}" title="{$field.title}">
           <div><img src="{$field.litpic}" alt="{$field.title}"></div>
           <p class="title">{$field.title}</p>
-          <p class="price"><span>点击数：{$field.click} </span>¥ {$field.users_price} </p>
+          <!-- <p class="price"><span>点击数：{$field.click} </span>¥ {$field.users_price} </p> -->
           </a></li>
        {/eyou:arclist} 
       </ul>
@@ -61,21 +61,39 @@
   </section>
   {/eyou:channelartlist}
   <!--产品中心——结束-->
+  <!--企业展示——开始-->
+ {eyou:channelartlist typeid='68'}
+ <section>
+   <div class="subject"> <span class="more"><a href="{eyou:field name='typeurl' /}">更多>></a></span><b>{eyou:field name='typename' /}</b> </div>
+   <div class="clear"></div>
+   <div class="home_pro">
+     <ul>
+      {eyou:arclist row='4' titlelen='30'}
+       <li><a href="{$field.arcurl}" title="{$field.title}">
+         <div><img src="{$field.litpic}" alt="{$field.title}"></div>
+         <p class="title">{$field.title}</p>
+         <!-- <p class="price"><span>点击数：{$field.click} </span>¥ {$field.users_price} </p> -->
+         </a></li>
+      {/eyou:arclist} 
+     </ul>
+     <div class="clear"></div>
+   </div>
+ </section>
+ {/eyou:channelartlist}
+ <!--企业展示——结束-->
   <!--关于我们——开始-->
-  {eyou:channelartlist typeid='1'}
+  <!-- {eyou:channelartlist typeid='1'}
   <section>
     <div class="subject"> <span class="more"><a href="{eyou:field name='typeurl' /}">更多>></a></span><b>{eyou:field name='typename' /}</b> </div>
     <div class="clear"></div>
     <div class="about">
-     <!--公司简介——开始-->
       <p style="text-indent: 2em;">
       {eyou:type typeid='8' addtable='single_content'}{$field.content|html_msubstr=###,0,155}...{/eyou:type}
       </p>
-      <!--公司简介——结束-->
       <div><img src="{eyou:adv pid='5' row='1'}{$field.litpic}{/eyou:adv}"></div>
     </div>
   </section>
-  {/eyou:channelartlist}
+  {/eyou:channelartlist} -->
   <!--关于我们——结束-->
  
   <!--新闻动态——开始-->
@@ -118,10 +136,9 @@
   {eyou:channelartlist typeid='78'}
   {notempty name="$purchase"}
   <section>
-    <!-- <div class="subject"> <span class="more"><a href="{eyou:field name='typeurl' /}">更多>></a></span><b>采购需求</b> </div> -->
-    <div class="subject"> <b>采购需求</b> </div>
+    <div class="subject"> <span class="more"><a href="/index.php?m=home&c=Purchase&a=lists&tid=78">更多>></a></span><b>采购需求</b> </div>
     <div class="clear"></div>
-    <div class="job_list">
+    <div class="job_list" style="margin-top: 20px;">
       <ul>
         <table cellspacing="0" cellpadding="0" style="width: 100%; font-size: 12px;">
           <thead>

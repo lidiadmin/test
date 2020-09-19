@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<!--此模板为采购列表-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<!--页面seo标题-->
+<title>{$eyou.field.seo_title}</title>
+<!--页面seo描述-->
+<meta name="description" content="{$eyou.field.seo_description}" />
+<!--页面seo关键词-->
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<!--网站地址栏图标-->
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+{eyou:static file="skin/css/amazeui.min.css" /}
+{eyou:static file="skin/css/app.css" /}
+<!--[if lt IE 9]>
+<div class="notsupport">
+	<h1>:( 非常遗憾</h1>
+	<h2>您的浏览器版本太低，请升级您的浏览器</h2>
+</div>
+<![endif]--> 
+{eyou:static file="skin/js/jquery.min.js" /}
+{eyou:static file="skin/js/amazeui.min.js" /}
+{eyou:static file="skin/js/app.js" /}
+</head>
+<body>
+<!--网站公用头部——开始-->
+{eyou:include file="header.htm" /}
+<!--网站公用头部——结束-->
+<!--网站公用自定义文件——开始-->
+{eyou:include file="banner.htm" /}
+<!--网站公用自定义文件——结束-->
+<div class="width inner_container">
+  <!--当前位置调用-->
+<ol class="am-breadcrumb">
+    <li><i class="am-icon-home"></i>{eyou:position style="" /}</li>  
+</ol>
+  <table class="am-table am-table-striped am-table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: center;">产品名称</th>
+        <th style="text-align: center;">采购数量</th>
+        <th style="text-align: center;">联系人</th>
+        <th style="text-align: center;">联系方式</th>
+        <th style="text-align: center;">日期</th>
+      </tr>
+    </thead>
+    {eyou:channelartlist typeid='78'}
+    {notempty name="$purchase"}
+    <tbody>
+    {eyou:foreach name='$purchase' item='vo1'}
+      <tr>
+        {volist name="$vo1" id="vo2"}
+          <td style="text-align: center;"><a href="/index.php?m=home&c=Purchase&a=content&aid={$vo2.aid}">{$vo2.attr_value}</a></td>
+        {/volist}
+      </tr>
+    {/eyou:foreach}
+    </tbody>
+    {/notempty}
+    {/eyou:channelartlist}
+  </table>
+  <div class="clear"></div>
+</div>
+<!--网站公用底部——开始-->
+{eyou:include file="footer.htm" /}
+<!--网站公用底部——结束-->
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<!--此模板为自定义新增企业模型详情模板-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<!--页面seo标题-->
+<title>{$eyou.field.seo_title}</title>
+<!--页面seo描述-->
+<meta name="description" content="{$eyou.field.seo_description}" />
+<!--页面seo关键词-->
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<!--网站地址栏图标-->
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+{eyou:static file="skin/css/amazeui.min.css" /}
+{eyou:static file="skin/css/app.css" /}
+{eyou:static file="skin/js/jquery.min.js" /}
+{eyou:static file="skin/js/amazeui.min.js" /}
+{eyou:static file="skin/js/app.js" /}
+</head>
+<body>
+<!--网站公用头部——开始-->
+{eyou:include file="header.htm" /}
+<!--网站公用头部——结束-->
+<article>
+  <section>
+    <div class="job_show">
+      <!--文章标题-->
+      <div class="info">
+        <ul>
+          {notempty name="$pucontent"}
+          {eyou:foreach name='$pucontent' item='vo'}
+          {if condition="$vo.attr_id neq '36'"}
+          <li><span>{$vo.attr_name}：</span>{$vo.attr_value}</li>
+          {/if}
+          {/eyou:foreach}
+          {/notempty}
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="clear"></div>
+    <div class="job_show">
+      <div class="intro">
+       <!--文章主体——自定义字段-->
+       {$pucontent[4]['attr_name']} ：{$pucontent[4]['attr_value']}
+      </div>
+    </div>
+  </section>
+  
+</article>
+
+<!--网站公用底部——开始-->
+{eyou:include file="footer.htm" /}
+<!--网站公用底部——结束-->
+</body>
+</html>
