@@ -234,6 +234,10 @@ class View extends Base
         $this->eyou = array_merge($this->eyou, $eyou);
         $this->assign('eyou', $this->eyou);
 
+
+        $productAttribute = model('ProductAttr');
+        $attributeList = $productAttribute->getProAttr($aid);
+        $this->assign('attributeList',$attributeList);
         /*模板文件*/
         $viewfile = !empty($result['tempview'])
         ? str_replace('.'.$this->view_suffix, '',$result['tempview'])
