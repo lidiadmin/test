@@ -47,9 +47,11 @@
     
     <!--产品参数调用——开始-->
     <ul class="attribute">
-      {eyou:attribute type='newattr' attrid='$eyou.field.attrlist_id'}
-      <li><em>{$attr.name}：</em>{$attr.value} </li>
-      {/eyou:attribute}
+      {eyou:foreach name="$attributeList" id="vo"}
+      {eyou:foreach name="vo" id="v"}
+     <li><em>{$v.attr_name}：</em>{$v.attr_value} </li>
+     {/eyou:foreach}
+     {/eyou:foreach}
     </ul>
     <!--产品参数调用——结束-->
     {eyou:sppurchase id='field'}
