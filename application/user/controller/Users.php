@@ -371,6 +371,11 @@ class Users extends Base
 
         // 跳转链接
         $referurl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : url("user/Users/centre");
+
+        if(strpos($referurl,'m=home&c=Lists&a=gbook_submi') !== false){
+            $referurl = url("home/Lists/index",array('tid'=>78));
+        }
+        
         cookie('referurl', $referurl);
         $this->assign('referurl', $referurl);
         return $this->fetch('users_login');

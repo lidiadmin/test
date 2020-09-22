@@ -55,7 +55,6 @@ class Common extends Controller {
         !defined('SESSION_ID') && define('SESSION_ID', $this->session_id); //将当前的session_id保存为常量，供其它方法调用
 
         $global = tpCache('global'); 
-
         /*关闭网站*/
         if (!empty($global['web_status']) && $global['web_status'] == 1) {
             die("<div style='text-align:center; font-size:20px; font-weight:bold; margin:50px 0px;'>网站暂时关闭，维护中……</div>");

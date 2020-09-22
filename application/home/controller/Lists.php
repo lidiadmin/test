@@ -33,6 +33,7 @@ class Lists extends Base
      */
     public function index($tid = '')
     {
+
         $param = input('param.');
 
         /*获取当前栏目ID以及模型ID*/
@@ -243,6 +244,11 @@ class Lists extends Base
      */
     public function gbook_submit()
     {
+
+        if(!is_numeric(session('users_id')) || session('users_id') <= 0){
+            $this->error('请先登录或者注册', url('user/Users/login'));
+            exit;
+        }
         $typeid = input('post.typeid/d');
 
         if (IS_POST && !empty($typeid)) {

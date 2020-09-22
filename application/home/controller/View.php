@@ -305,7 +305,7 @@ class View extends Base
         if (0 < intval($result['arc_level_id'])) {
             $UsersData = session('users');
             if (empty($UsersData['users_id'])) {
-                $this->error('请登录后下载！');
+                $this->error('请登录后下载！', url('user/Users/login'));
                 exit;
             }else{
                 /*判断会员是否可下载该文件--2019-06-21 陈风任添加*/
