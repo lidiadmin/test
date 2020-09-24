@@ -33,7 +33,7 @@
 
 <body>
 <!--网站公用头部——开始-->
-{eyou:include file="header.htm" /}
+{eyou:include file="header.htm" /}  
 <!--网站公用头部——结束-->
 {eyou:channelartlist typeid='3'}
 <div class="bg_gray top_menu">
@@ -42,7 +42,7 @@
     <div class="home_nav">
       <ul>
         {eyou:channel type="son" row='50'}
-        <li id="one{$i}" onMouseOver="setTab('one',{$i},3)"><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
+        <li><a href="{$field.typeurl}" title="{$field.typename}">{$field.typename}</a></li>
         {/eyou:channel}
       </ul>
       <div class="clear"></div>
@@ -226,36 +226,28 @@
 	  <h2>采购需求</h2>
 	  <div class="border">purchase</div>
     </div>
-  <div class="home_news">
-  
-    <ul class="home_news_list">
-      <table cellspacing="0" cellpadding="0" style="width: 100%;">
-          <thead>
-          <tr>
-              {eyou:foreach name="$purchase[0]" id="vo"}
-                  {if condition="$i elt 4" }
-                      <th style="text-align: center; border:1px solid #000;" class="w100">
-                          <div >{$vo.attr_name}</div>
-                      </th>
-                  {/if}
-              {/eyou:foreach}
-          </tr>
-          </thead>
-          {eyou:foreach name='$purchase' item='vo1'}
-          <tr>
-            {volist name="$vo1" id="vo2"}
-                    <td class="w100" style="text-align: center;border:1px solid #000;">
-                        <div class="tc">{$vo2.attr_value|text_msubstr=###,0,50,true}</div>
-                    </td>
-            {/volist}
-          </tr>
+    <table class="am-table am-table-striped am-table-hover">
+      <thead>
+        <tr>
+          {eyou:foreach name="$purchase[0]" id="vo"}
+          {if condition="$i elt 4" }
+              <th>{$vo.attr_name}</th>
+          {/if}
           {/eyou:foreach}
-      </table>
-    </ul>
+        </tr>
+      </thead>
+      <tbody>
+        {eyou:foreach name='$purchase' item='vo1'}
+        <tr>
+          {volist name="$vo1" id="vo2"}
+                  <td>{$vo2.attr_value|text_msubstr=###,0,50,true}</td>
+          {/volist}
+        </tr>
+        {/eyou:foreach}
+      </tbody>
+    </table>
     <div class="clear"></div>
     <div class="home_more"> <span class="more"><a href="/index.php?m=home&c=Purchase&a=lists&tid=78">查看更多<i class="fa fa-angle-right"></i></a></span></div>
-  </div>
-  
 </div>
 {/notempty}
 {/eyou:channelartlist}

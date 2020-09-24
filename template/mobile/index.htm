@@ -138,30 +138,13 @@
   <section>
     <div class="subject"> <span class="more"><a href="/index.php?m=home&c=Purchase&a=lists&tid=78">更多>></a></span><b>采购需求</b> </div>
     <div class="clear"></div>
-    <div class="job_list" style="margin-top: 20px;">
+    <div class="job_list">
       <ul>
-        <table cellspacing="0" cellpadding="0" style="width: 100%; font-size: 12px;">
-          <thead>
-          <tr>
-              {eyou:foreach name="$purchase[0]" id="vo"}
-                  {if condition="$i elt 4" }
-                      <th style="text-align: center; border:1px solid #000;" class="w100">
-                          <div >{$vo.attr_name}</div>
-                      </th>
-                  {/if}
-              {/eyou:foreach}
-          </tr>
-          </thead>
-          {eyou:foreach name='$purchase' item='vo1'}
-          <tr>
-            {volist name="$vo1" id="vo2"}
-                    <td class="w100" style="text-align: center;border:1px solid #000;">
-                        <div class="tc">{$vo2.attr_value|text_msubstr=###,0,50,true}</div>
-                    </td>
-            {/volist}
-        </tr>
+        {eyou:foreach name='$purchase' item='vo1'}
+        <li><a href="/index.php?m=home&c=Purchase&a=content&aid={$vo1[0][aid]}">{$vo1[0][attr_value]}</a>
+          <div class="money">{$vo1[2][attr_name]} : {$vo1[2][attr_value]}<span>{$vo1[3][attr_name]} : {$vo1[3][attr_value]}</span></div>
+        </li>
         {/eyou:foreach}
-      </table>
       </ul>
       <div class="clear"></div>
     </div>
