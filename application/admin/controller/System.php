@@ -344,13 +344,14 @@ class System extends Base
         $inc_type =  'basic';
 
         // 文件上传最大限制
-        $maxFileupload = @ini_get('file_uploads') ? ini_get('upload_max_filesize') : 0;
-        if (0 !== $maxFileupload) {
-            $max_filesize = unformat_bytes($maxFileupload);
-            $max_filesize = $max_filesize / 1024 / 1024; // 单位是MB的大小
-        } else {
-            $max_filesize = 500;
-        }
+        // $maxFileupload = @ini_get('file_uploads') ? ini_get('upload_max_filesize') : 0;
+        // if (0 !== $maxFileupload) {
+        //     $max_filesize = unformat_bytes($maxFileupload);
+        //     $max_filesize = $max_filesize / 1024 / 1024; // 单位是MB的大小
+        // } else {
+        //     $max_filesize = 500;
+        // }
+        $max_filesize = 1024;
         $max_sizeunit = 'MB';
         $maxFileupload = $max_filesize.$max_sizeunit;
 
