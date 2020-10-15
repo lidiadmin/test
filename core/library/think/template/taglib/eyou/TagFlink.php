@@ -31,16 +31,16 @@ class TagFlink extends Base
      */
     public function getFlink($type = 'text', $limit = '')
     {
-        if ($type == 'text') {
-            $typeid = 1;
-        } elseif ($type == 'image') {
-            $typeid = 2;
-        }
+        // if ($type == 'text') {
+        //     $typeid = 1;
+        // } elseif ($type == 'image') {
+        //     $typeid = 2;
+        // }
 
         $map = array();
-        if (!empty($typeid)) {
-            $map['typeid'] = array('eq', $typeid);
-        }
+        // if (!empty($typeid)) {
+        //     $map['typeid'] = array('eq', $typeid);
+        // }
         $map['lang'] = $this->home_lang;
         $map['status'] = 1;
         $result = M("links")->where($map)
@@ -53,7 +53,6 @@ class TagFlink extends Base
             $val['target'] = ($val['target'] == 1) ? 'target="_blank"' : 'target="_self"';
             $result[$key] = $val;
         }
-
         return $result;
     }
 }

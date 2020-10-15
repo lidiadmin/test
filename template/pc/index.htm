@@ -256,8 +256,12 @@
 <div class="bg_link">
   <div class="width link"> 
     <div class="link_list" id="link"> 友情链接：
-    {eyou:flink titlelen='45' type='text'}
-    <a href="{$field.url}" {$field.target}>{$field.title} </a>
+    {eyou:flink titlelen='45'}
+    {if condition="$field.typeid eq 2"}
+    <a href="{$field.url}" {$field.target}> <img src="{$field.logo}" alt="{$field.title}" height="25"></a>
+    {else /}
+    <a href="{$field.url}" {$field.target}>{$field.title}</a>
+    {/if}
     {/eyou:flink}
     </div>
     <div class="clear"></div>
