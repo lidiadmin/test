@@ -590,6 +590,7 @@ a.gaoqing:hover{background:url("../img/gaoqing_1.jpg") 1px 1px no-repeat;color:#
 
 
 
+
 /*main css*/
 .main-im{ position:fixed; right: 10px; top:300px; z-index: 10000; width: 110px; height: 272px; }
 .main-im .qq-a { display: block; width: 106px; height: 116px; font-size: 14px; color: #0484cd; text-align: center; position: relative; }
